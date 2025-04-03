@@ -33,4 +33,4 @@ vim.keymap.set("n", "<leader><leader>x", "<cmd>source %<CR>")
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic [E]rror messages" })
 
 -- Avante
-vim.keymap.set("n", "<leader>ac", "<cmd>AvanteClear<cr>", { desc = "[C]lear [A]vante" })
+vim.keymap.set("n", "<leader>ac", "<cmd>AvanteClear<Return>", { desc = "[C]lear [A]vante" })

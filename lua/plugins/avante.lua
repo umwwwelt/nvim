@@ -9,6 +9,7 @@ return {
 			provider = "openai",
 			auto_suggestions_provider = "gemini",
 			memory_summary_provider = "gemini",
+			cursor_applying_provider = "gemini",
 			openai = {
 				endpoint = "https://api.openai.com/v1",
 				model = "gpt-4o", -- your desired model (or use gpt-4o, etc.)
@@ -17,7 +18,7 @@ return {
 				--reasoning_effort = "medium", -- low|medium|high, only used for reasoning models
 			},
 			claude = {
-				model = "claude-3-5-sonnet-latest",
+				model = "claude-3-7-sonnet-latest",
 				max_tokens = 8192,
 			},
 			gemini = {
@@ -56,11 +57,19 @@ return {
 				suggestion = {
 					accept = "<Tab>",
 				},
+				ask = "<leader>à",
+				files = {
+					add_current = "<leader>aw",
+				},
 			},
 			windows = {
 				sidebar_header = {
 					rounded = false,
-					align = "right",
+					align = "left",
+				},
+				edit = {
+					border = { " ", " ", " ", " ", " ", "oo", " ", " " },
+					start_insert = false,
 				},
 			},
 		},
