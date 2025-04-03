@@ -23,6 +23,14 @@ return {
 			gemini = {
 				model = "gemini-2.0-flash-lite",
 			},
+			vendors = {
+				mistral = {
+					api_key_name = "MISTRAL_API_KEY",
+					endpoint = "https://api.mistral.ai/v1",
+					model = "mistral-large-latest",
+					__inherited_from = "openai",
+				},
+			},
 			suggestion = {
 				debounce = 300,
 				throttle = 1000,
