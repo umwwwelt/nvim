@@ -50,16 +50,12 @@ local function get_openai_budget()
 	local cost_output = (total_output_tokens / 1e6) * cost_per_million_output
 	local total_cost = cost_input + cost_output
 
-	-- Calculer le coût total en euros
-	local cost_input_eur = cost_input * 0.9173
-	local cost_output_eur = cost_output * 0.9173
-	local total_cost_eur = cost_input_eur + cost_output_eur
-
 	if total_input_tokens + total_output_tokens == 0 then
 		return "⚠️ Données de facturation indisponibles"
 	end
 
-	return string.format("💰 OpenAI : %.2f €", total_cost_eur)
+	-- Modifier le retour pour afficher le coût en dollars
+	return string.format("💰 OpenAI : %.2f $", total_cost)
 end
 
 local function get_anthropic_budget()
@@ -95,23 +91,17 @@ local function get_anthropic_budget()
 		return "⚠️ Erreur décodage JSON Anthropic"
 	end
 
-	-- Les prix sont en crédits par 1K tokens (approximatif, à ajuster selon les tarifs réels)
-	local cost_per_k_input = 0.0025 -- $0.0025 par 1K tokens input (Claude-3)
-	local cost_per_k_output = 0.008 -- $0.008 par 1K tokens output (Claude-3)
-
 	local total_cost = 0
 	if usage_json.total_usage then -- Changement de la structure JSON
 		total_cost = usage_json.total_usage.amount_usd or 0
 	end
 
-	-- Convertir le coût total en euros
-	local total_cost_eur = total_cost * 0.9173
-
 	if total_cost == 0 then
 		return "⚠️ Données de facturation Anthropic indisponibles"
 	end
 
-	return string.format("🤖 Anthropic : %.2f €", total_cost_eur)
+	-- Modifier le retour pour afficher le coût en dollars
+	return string.format("🤖 Anthropic : %.2f $", total_cost)
 end
 
 -- Fonction qui combine les deux budgets

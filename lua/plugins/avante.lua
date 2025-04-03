@@ -27,7 +27,7 @@ return {
 				mistral = {
 					api_key_name = "MISTRAL_API_KEY",
 					endpoint = "https://api.mistral.ai/v1",
-					model = "mistral-large-latest",
+					model = "codestral-latest",
 					__inherited_from = "openai",
 				},
 			},
