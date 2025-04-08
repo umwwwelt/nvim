@@ -41,7 +41,20 @@ vim.opt.inccommand = "split"
 
 -- gouttiere
 vim.opt.signcolumn = "yes"
-
+vim.diagnostic.config({
+	virtual_text = true,
+	underline = {
+		severity = { min = vim.diagnostic.severity.WARN, highlight = { underline = true, sp = "#808080" } },
+	},
+	signs = {
+		text = {
+			[vim.diagnostic.severity.HINT] = "",
+			[vim.diagnostic.severity.ERROR] = "✘",
+			[vim.diagnostic.severity.INFO] = "◉",
+			[vim.diagnostic.severity.WARN] = "",
+		},
+	},
+})
 -- undo
 vim.opt.undofile = true
 

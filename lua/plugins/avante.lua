@@ -6,7 +6,7 @@ return {
 		opts = {
 			-- add any opts here
 			-- for example avante
-			provider = "mistral",
+			provider = "openai",
 			auto_suggestions_provider = "gemini",
 			memory_summary_provider = "gemini",
 			cursor_applying_provider = "gemini",
@@ -68,7 +68,7 @@ return {
 					align = "left",
 				},
 				edit = {
-					border = { " ", " ", " ", " ", " ", "oo", " ", " " },
+					border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
 					start_insert = false,
 				},
 			},
