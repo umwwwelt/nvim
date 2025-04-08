@@ -3,7 +3,7 @@ return {
 		"saghen/blink.cmp",
 		dependencies = { "rafamadriz/friendly-snippets", "Kaiser-Yang/blink-cmp-avante" },
 		version = "*",
-
+		build = "cargo +nightly build --release",
 		fuzzy = {
 			prebuilt_binaries = {
 				download = true,
