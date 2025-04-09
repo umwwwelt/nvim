@@ -43,9 +43,7 @@ vim.opt.inccommand = "split"
 vim.opt.signcolumn = "yes"
 vim.diagnostic.config({
 	virtual_text = true,
-	underline = {
-		severity = { min = vim.diagnostic.severity.WARN, highlight = { underline = true, sp = "#808080" } },
-	},
+	underline = false,
 	signs = {
 		text = {
 			[vim.diagnostic.severity.HINT] = "",

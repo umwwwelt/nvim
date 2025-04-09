@@ -9,14 +9,16 @@ return {
 				flavor = "latte",
 				transparent_background = true,
 				styles = {
-					comments = { "italic" },
+					attributes = {},
+					comments = {},
+					keywords = { "italic" },
 				},
 				color_overrides = {
 					mocha = {
 						green = "#93dbbd",
 						blue = "#5FA8D3",
 						lavender = "#C4A5FF",
-						red = "#ff3e00",
+						svelte = "#f96743",
 						paleblue = "#B0E0E9",
 						tsblue = "#007ACC",
 					},
@@ -30,17 +32,26 @@ return {
 						-- svelte
 						["@string.svelte"] = { fg = colors.rosewater },
 						["@tag.svelte"] = { fg = colors.maroon },
-						["@keyword.conditional.svelte"] = { fg = colors.red, bold = true },
+						["@component.svelte"] = { fg = colors.svelte, bold = true },
+						["@label.typescript"] = { fg = colors.svelte, bold = true },
+						["@keyword.svelte"] = { fg = colors.svelte, italic = true },
+						["@tag.attribute.svelte"] = { fg = colors.green, italic = false },
+						["@keyword.repeat.svelte"] = { fg = colors.svelte, bold = true, italic = true },
+						["@keyword.conditional.svelte"] = { fg = colors.svelte, bold = true, italic = true },
+						["@tag.component.svelte"] = { fg = colors.svelte, bold = true },
 						["@class.component.svelte"] = { bold = true },
-						["@lsp.type.function.svelte"] = { fg = colors.red },
+						["@lsp.type.function.svelte"] = { fg = colors.svelte },
 						["@lsp.typemod.function.local.svelte"] = { fg = colors.blue },
+						["@lsp.typemod.function.readonly.svelte"] = { fg = colors.paleblue },
 						-- JS
 						["@function.method.call.javascript"] = { bold = true },
 						-- TS
-						["@keyword.type.typescript"] = { fg = colors.tsblue, italic = true },
-						["@lsp.type.type.svelte"] = { fg = colors.paleblue, underline = true },
+						["@keyword.type.typescript"] = { fg = colors.tsblue },
+						["@keyword.operator.typescript"] = { fg = colors.tsblue, italic = true },
+						["@lsp.type.type.svelte"] = { fg = colors.tsblue, underline = true },
 						["@type.builtin.typescript"] = { fg = colors.paleblue },
-						["@lsp.type.interface"] = { fg = colors.paleblue, bold = true },
+						["@lsp.type.interface"] = { fg = colors.tsblue, underline = true },
+						["@lsp.typemod.interface.declaration.svelte"] = { fg = colors.tsblue },
 						-- CSS
 						["@property.class.scss"] = { fg = colors.blue },
 					}

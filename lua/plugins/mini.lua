@@ -1,9 +1,17 @@
 return {
-	{ 'echasnovski/mini.nvim', 
-	config = function()
-		local statusline = require 'mini.statusline'
-		statusline.setup { use_icons = true }
-		-- Better Around/Inside textobjects
+	{
+		"echasnovski/mini.nvim",
+		config = function()
+			local statusline = require("mini.statusline")
+			local highlighter = require("mini.hipatterns")
+			highlighter.setup({
+				highlighter = {
+					-- Highlight hex color strings (`#rrggbb`) using that color
+					hex_color = highlighter.gen_highlighter.hex_color(),
+				},
+			})
+			statusline.setup({ use_icons = true })
+			-- Better Around/Inside textobjects
 			-- Examples:
 			--  - va)  - [V]isually select [A]round [)]paren
 			--  - yinq - [Y]ank [I]nside [N]ext [']quote
@@ -18,7 +26,7 @@ return {
 			require("mini.surround").setup()
 
 			require("mini.pairs").setup()
-		    end,
-		    version = 'false' },
-
-		}
+		end,
+		version = "false",
+	},
+}
