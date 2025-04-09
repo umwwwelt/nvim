@@ -21,6 +21,8 @@ return {
 						svelte = "#f96743",
 						paleblue = "#B0E0E9",
 						tsblue = "#007ACC",
+						mauve = "#624e80",
+						surface1 = "#302e33",
 					},
 				},
 				custom_highlights = function(colors)
@@ -47,6 +49,7 @@ return {
 						["@function.method.call.javascript"] = { bold = true },
 						-- TS
 						["@keyword.type.typescript"] = { fg = colors.tsblue },
+						["@keyword.conditional.typescript"] = { fg = colors.lavender, italic = true },
 						["@keyword.operator.typescript"] = { fg = colors.tsblue, italic = true },
 						["@lsp.type.type.svelte"] = { fg = colors.tsblue, underline = true },
 						["@type.builtin.typescript"] = { fg = colors.paleblue },
