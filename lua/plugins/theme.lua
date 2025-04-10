@@ -27,6 +27,7 @@ return {
 				},
 				custom_highlights = function(colors)
 					return {
+						CursorLineNr = { fg = colors.green, bold = true },
 						Operator = { fg = colors.yellow },
 						["@property"] = { fg = colors.text },
 						["@tag.delimiter.svelte"] = { fg = colors.rosewater },

@@ -10,51 +10,44 @@ local function get_openai_budget()
 	local today = os.time()
 	local first_day = os.time({ year = os.date("%Y"), month = os.date("%m"), day = 1 })
 
-	-- Mettre à jour l'URL pour utiliser le bon endpoint
-	local usage_url = "https://api.openai.com/v1/organization/usage/completions?start_time="
-		.. first_day
-		.. "&end_time="
-		.. today
+	local total_cost = 0
+	local has_more = true
+	local last_id = nil
 
-	local usage_resp = curl.get(usage_url, {
-		headers = {
-			["Authorization"] = "Bearer " .. openai_admin_key,
-		},
-	})
+	while has_more do
+		-- Construire l'URL avec le paramètre after si nécessaire
+		local usage_url = "https://api.openai.com/v1/organization/costs?start_time=" .. first_day .. "&end_time=" .. today
+		if last_id then
+			usage_url = usage_url .. "&after=" .. last_id
+		end
 
-	local ok1, usage_json = pcall(vim.fn.json_decode, usage_resp.body or "")
+		local usage_resp = curl.get(usage_url, {
+			headers = {
+				["Authorization"] = "Bearer " .. openai_admin_key,
+			},
+		})
 
-	-- print(vim.inspect(usage_json))
-	if not ok1 then
-		return "⚠️ Erreur décodage JSON OpenAI"
-	end
+		local ok1, usage_json = pcall(vim.fn.json_decode, usage_resp.body or "")
 
-	-- Initialiser les compteurs de tokens
-	local total_input_tokens = 0
-	local total_output_tokens = 0
+		print(vim.inspect(usage_json))
+		if not ok1 then
+			return "⚠️ Erreur décodage JSON OpenAI"
+		end
 
-	-- Itérer sur tous les éléments du tableau data
-	for _, item in ipairs(usage_json.data) do
-		if item.results and item.results[1] then
-			local result = item.results[1]
-			total_input_tokens = total_input_tokens + (result.input_tokens or 0)
-			total_output_tokens = total_output_tokens + (result.output_tokens or 0)
+		-- Itérer sur tous les éléments du tableau data
+		for _, item in ipairs(usage_json.data) do
+			if item and item.amount and item.amount.value then
+				total_cost = total_cost + item.amount.value
+			end
+		end
+
+		-- Vérifier s'il y a une page suivante
+		has_more = usage_json.has_more or false
+		if has_more and usage_json.data[#usage_json.data] then
+			last_id = usage_json.data[#usage_json.data].id
 		end
 	end
 
-	-- Calculer le coût total
-	local cost_per_million_input = 2.5
-	local cost_per_million_output = 10.0
-
-	local cost_input = (total_input_tokens / 1e6) * cost_per_million_input
-	local cost_output = (total_output_tokens / 1e6) * cost_per_million_output
-	local total_cost = cost_input + cost_output
-
-	if total_input_tokens + total_output_tokens == 0 then
-		return "⚠️ Données de facturation indisponibles"
-	end
-
-	-- Modifier le retour pour afficher le coût en dollars
 	return string.format("💰 OpenAI : %.2f $", total_cost)
 end
 

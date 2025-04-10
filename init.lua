@@ -15,7 +15,8 @@ vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
 
 -- scroll padding
-vim.opt.scrolloff = 10
+vim.opt.scrolloff = 15
+vim.bo.modifiable = true
 
 -- set
 vim.opt.incsearch = true
