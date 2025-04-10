@@ -21,6 +21,7 @@ return {
 						svelte = "#f96743",
 						paleblue = "#B0E0E9",
 						tsblue = "#007ACC",
+						tsdarker = "#004675",
 						mauve = "#624e80",
 						surface1 = "#302e33",
 					},
@@ -52,8 +53,9 @@ return {
 						-- TS
 						["@keyword.type.typescript"] = { fg = colors.tsblue },
 						["@keyword.conditional.typescript"] = { fg = colors.lavender, italic = true },
-						["@keyword.operator.typescript"] = { fg = colors.tsblue, italic = true },
+						["@keyword.operator.typescript"] = { fg = colors.tsdarker, italic = true },
 						["@lsp.type.type.svelte"] = { fg = colors.tsblue, underline = true },
+						["@lsp.type.type.typescript"] = { fg = colors.tsblue, underline = true },
 						["@type.builtin.typescript"] = { fg = colors.paleblue },
 						["@lsp.type.interface"] = { fg = colors.tsblue, underline = true },
 						["@lsp.typemod.interface.declaration.svelte"] = { fg = colors.tsblue },
