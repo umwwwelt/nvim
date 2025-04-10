@@ -29,6 +29,7 @@ return {
 					return {
 						CursorLineNr = { fg = colors.green, bold = true },
 						Operator = { fg = colors.yellow },
+						Comment = { fg = colors.surface1 },
 						["@property"] = { fg = colors.text },
 						["@tag.delimiter.svelte"] = { fg = colors.rosewater },
 						["@custom.html"] = { fg = colors.base },
