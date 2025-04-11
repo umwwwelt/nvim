@@ -45,6 +45,7 @@ vim.opt.signcolumn = "yes"
 vim.diagnostic.config({
 	virtual_text = true,
 	underline = false,
+	italic = false,
 	signs = {
 		text = {
 			[vim.diagnostic.severity.HINT] = "",

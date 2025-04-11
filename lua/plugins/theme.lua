@@ -19,6 +19,7 @@ return {
 						lavender = "#C4A5FF",
 						mauve = "#624e80",
 						rosedarker = "#803443",
+						red = "#FF0000",
 						svelte = "#f96743",
 						paleblue = "#B0E0E9",
 						paledarker = "#6d898f",
@@ -34,11 +35,13 @@ return {
 						CursorLineNr = { fg = colors.green, bold = true },
 						CursorLine = { bg = colors.trans },
 						Operator = { fg = colors.yellow },
-						Comment = { fg = colors.surface1 },
+						Comment = { fg = colors.surface2 },
+						AvanteSuggestion = { reverse = true },
+						AvantePopupHint = { bg = colors.green },
 						["@property"] = { fg = colors.text },
-						["@tag.delimiter.svelte"] = { fg = colors.base },
+						["@tag.delimiter.svelte"] = { fg = colors.surface1 },
 						["@custom.html"] = { fg = colors.base },
-						["@punctuation.bracket"] = { fg = colors.surface0 },
+						["@punctuation.bracket"] = { fg = colors.surface2 },
 						-- svelte
 						["@string.svelte"] = { fg = colors.rosewater },
 						["@tag.svelte"] = { fg = colors.maroon },
@@ -56,6 +59,7 @@ return {
 						-- JS
 						["@function.method.call.javascript"] = { bold = true },
 						-- TS
+						["@punctuation.delimiter.typescript"] = { fg = colors.surface1 },
 						["@keyword.type.typescript"] = { fg = colors.tsblue },
 						["@keyword.conditional.typescript"] = { fg = colors.lavender, italic = true },
 						["@keyword.operator.typescript"] = { fg = colors.tsdarker, italic = true },
