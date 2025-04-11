@@ -1,4 +1,4 @@
-# Project Name
+# NVIM Config
 
 ## Overview
 
