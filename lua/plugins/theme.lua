@@ -8,6 +8,7 @@ return {
 			require("catppuccin").setup({
 				flavor = "latte",
 				transparent_background = true,
+				term_colors = false,
 				styles = {
 					attributes = {},
 					comments = {},
@@ -15,25 +16,29 @@ return {
 				},
 				color_overrides = {
 					mocha = {
-						green = "#93dbbd",
-						lavender = "#C4A5FF",
-						mauve = "#624e80",
-						rosedarker = "#803443",
-						red = "#FF0000",
-						svelte = "#f96743",
-						paleblue = "#B0E0E9",
-						paledarker = "#6d898f",
-						blue = "#5FA8D3",
-						tsblue = "#007ACC",
-						tsdarker = "#004675",
-						surface1 = "#302e34",
-						trans = "#070a09",
+						green = "#5FFFB2", -- inchangé
+						lavender = "#E1AFFF", -- violet clair très saturé
+						mauve = "#4a0182", -- violet électrique
+						peach = "#f79e54",
+						rosedarker = "#FF3C5E", -- rose/rouge très éclatant
+						red = "#FF4D4D", -- rouge vif
+						svelte = "#f96743", -- inchangé
+						paleblue = "#A3F7FF", -- bleu ciel très lumineux
+						paledarker = "#5DCAD6", -- turquoise saturé
+						blue = "#3EBEFF", -- bleu électrique
+						tsblue = "#007ACC", -- inchangé
+						tsdarker = "#0063A6", -- bleu foncé mais plus saturé
+						surface1 = "#46424E", -- gris profond, un peu bleuté
+						yellow = "#f7d302",
+						yellowdark = "#5c4e01",
+						trans = "#0F1413", -- noir doux avec un peu plus de lumière
 					},
 				},
 				custom_highlights = function(colors)
 					return {
 						CursorLineNr = { fg = colors.green, bold = true },
 						CursorLine = { bg = colors.trans },
+						IblScope = { fg = colors.surface1 },
 						Operator = { fg = colors.yellow },
 						Comment = { fg = colors.surface2 },
 						AvanteSuggestion = { reverse = true },
@@ -59,6 +64,7 @@ return {
 						-- JS
 						["@function.method.call.javascript"] = { bold = true },
 						-- TS
+						["@keyword.typescript"] = { fg = colors.yellowdark },
 						["@punctuation.delimiter.typescript"] = { fg = colors.surface1 },
 						["@keyword.type.typescript"] = { fg = colors.tsblue },
 						["@keyword.conditional.typescript"] = { fg = colors.lavender, italic = true },

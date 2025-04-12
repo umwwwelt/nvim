@@ -28,6 +28,11 @@ return {
 			--  - yinq - [Y]ank [I]nside [N]ext [']quote
 			--  - ci'  - [C]hange [I]nside [']quote
 			require("mini.ai").setup({ n_lines = 500 })
+			require("mini.indentscope").setup({
+				draw = {
+					delay = 70,
+				},
+			})
 
 			-- Add/delete/replace surroundings (brackets, quotes, etc.)
 			--
@@ -38,6 +43,6 @@ return {
 
 			require("mini.pairs").setup()
 		end,
-		version = "false",
+		version = "*",
 	},
 }
