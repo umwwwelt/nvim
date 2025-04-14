@@ -1,6 +1,7 @@
 return {
 	{
 		"catppuccin/nvim",
+		enabled = true,
 		name = "catppuccin",
 		priority = 1000,
 		config = function()
@@ -8,7 +9,7 @@ return {
 			require("catppuccin").setup({
 				flavor = "latte",
 				transparent_background = true,
-				term_colors = false,
+				term_colors = true,
 				styles = {
 					attributes = {},
 					comments = {},
@@ -18,7 +19,7 @@ return {
 					mocha = {
 						green = "#5FFFB2", -- inchangé
 						lavender = "#E1AFFF", -- violet clair très saturé
-						mauve = "#4a0182", -- violet électrique
+						mauve = "#46007c", -- violet électrique
 						peach = "#f79e54",
 						rosedarker = "#FF3C5E", -- rose/rouge très éclatant
 						red = "#FF4D4D", -- rouge vif
@@ -36,6 +37,7 @@ return {
 				},
 				custom_highlights = function(colors)
 					return {
+						TelescopeBorder = { fg = colors.green },
 						CursorLineNr = { fg = colors.green, bold = true },
 						CursorLine = { bg = colors.trans },
 						IblScope = { fg = colors.surface1 },
@@ -60,11 +62,14 @@ return {
 						["@class.component.svelte"] = { bold = true },
 						["@lsp.type.function.svelte"] = { fg = colors.svelte },
 						["@lsp.typemod.function.local.svelte"] = { fg = colors.blue },
-						["@lsp.typemod.function.readonly.svelte"] = { fg = colors.paleblue },
+						["@lsp.typemod.function.readonly.svelte"] = { fg = colors.sapphire },
 						-- JS
+						["@string.javascript"] = { fg = colors.rosewater },
 						["@function.method.call.javascript"] = { bold = true },
 						-- TS
+						["@string.typescript"] = { fg = colors.rosewater },
 						["@keyword.typescript"] = { fg = colors.yellowdark },
+						["@punctuation.special.typescript"] = { fg = colors.yellow },
 						["@punctuation.delimiter.typescript"] = { fg = colors.surface1 },
 						["@keyword.type.typescript"] = { fg = colors.tsblue },
 						["@keyword.conditional.typescript"] = { fg = colors.lavender, italic = true },
@@ -72,11 +77,14 @@ return {
 						["@keyword.coroutine.typescript"] = { fg = colors.paledarker, italic = true },
 						["@lsp.type.type.svelte"] = { fg = colors.tsblue, underline = true },
 						["@lsp.type.type.typescript"] = { fg = colors.tsblue, underline = true },
-						["@type.builtin.typescript"] = { fg = colors.paleblue },
+						["@type.builtin.typescript"] = { fg = colors.lavender },
 						["@lsp.type.interface"] = { fg = colors.tsblue, underline = true },
 						["@lsp.typemod.interface.declaration.svelte"] = { fg = colors.tsblue },
 						-- CSS
 						["@property.class.scss"] = { fg = colors.blue },
+						["@keyword.directive.scss"] = { fg = colors.rosedarker },
+						["@variable.scss"] = { fg = colors.lavender },
+						["@character.special.scss"] = { fg = colors.yellow },
 					}
 				end,
 			})

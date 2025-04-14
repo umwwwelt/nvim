@@ -56,6 +56,7 @@ vim.diagnostic.config({
 		},
 	},
 })
+vim.api.nvim_set_hl(0, "LspDeprecated", { strikethrough = true })
 -- undo
 vim.opt.undofile = true
 
