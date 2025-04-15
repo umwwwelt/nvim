@@ -19,7 +19,7 @@ return {
 					mocha = {
 						green = "#5FFFB2", -- inchangé
 						lavender = "#E1AFFF", -- violet clair très saturé
-						mauve = "#46007c", -- violet électrique
+						mauve = "#7c00db", -- violet électrique
 						peach = "#f79e54",
 						rosedarker = "#FF3C5E", -- rose/rouge très éclatant
 						red = "#FF4D4D", -- rouge vif
