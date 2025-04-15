@@ -9,6 +9,9 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 -- Cancel search highlight on <Esc>
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
+-- delelte entire word
+vim.keymap.set("i", "<M-BS>", "<C-w>", { noremap = true })
+
 -- move in autocompletion suggestionkeykey
 ---[[ Setup keymaps so we can accept completion using Enter and choose items using arrow keys or Tab.
 local pumMaps = {

@@ -40,6 +40,8 @@ return {
 						TelescopeBorder = { fg = colors.green },
 						CursorLineNr = { fg = colors.green, bold = true },
 						CursorLine = { bg = colors.trans },
+						MiniIndentscopeSymbol = { fg = colors.surface2 }, -- ligne d'indentation mini.indentscope
+						LineNr = { fg = colors.surface2 }, -- gutter line numbers
 						IblScope = { fg = colors.surface1 },
 						Operator = { fg = colors.yellow },
 						Comment = { fg = colors.surface2 },
@@ -49,6 +51,7 @@ return {
 						["@tag.delimiter.svelte"] = { fg = colors.surface1 },
 						["@custom.html"] = { fg = colors.base },
 						["@punctuation.bracket"] = { fg = colors.surface2 },
+						["@keyword.exception"] = { fg = colors.red },
 						-- svelte
 						["@string.svelte"] = { fg = colors.rosewater },
 						["@tag.svelte"] = { fg = colors.maroon },
@@ -77,7 +80,7 @@ return {
 						["@keyword.coroutine.typescript"] = { fg = colors.paledarker, italic = true },
 						["@lsp.type.type.svelte"] = { fg = colors.tsblue, underline = true },
 						["@lsp.type.type.typescript"] = { fg = colors.tsblue, underline = true },
-						["@type.builtin.typescript"] = { fg = colors.lavender },
+						["@type.builtin.typescript"] = { fg = colors.tsblue },
 						["@lsp.type.interface"] = { fg = colors.tsblue, underline = true },
 						["@lsp.typemod.interface.declaration.svelte"] = { fg = colors.tsblue },
 						-- CSS
@@ -85,6 +88,10 @@ return {
 						["@keyword.directive.scss"] = { fg = colors.rosedarker },
 						["@variable.scss"] = { fg = colors.lavender },
 						["@character.special.scss"] = { fg = colors.yellow },
+						-- Diag
+						DiagnosticWarn = { fg = colors.yellowdark },
+						DiagnosticVirtualTextWarn = { fg = colors.yellowdark },
+						DiagnosticUnderlineWarn = { sp = colors.yellowdark, undercurl = true },
 					}
 				end,
 			})
