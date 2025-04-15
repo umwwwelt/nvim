@@ -2,6 +2,9 @@ require("config.lazy")
 require("keymap")
 require("config.autocmd")
 
+-- sync clipboard
+vim.opt.clipboard = "unnamedplus"
+
 -- number colon
 vim.opt.number = true
 vim.opt.relativenumber = true

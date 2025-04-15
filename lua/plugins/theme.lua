@@ -24,6 +24,7 @@ return {
 						rosedarker = "#FF3C5E", -- rose/rouge très éclatant
 						red = "#FF4D4D", -- rouge vif
 						cyan = "#00988e",
+						cyandarker = "#005c56",
 						svelte = "#f96743", -- inchangé
 						paleblue = "#A3F7FF", -- bleu ciel très lumineux
 						paledarker = "#5DCAD6", -- turquoise saturé
@@ -55,8 +56,10 @@ return {
 						["@keyword.exception"] = { fg = colors.red },
 						["@keyword.coroutine"] = { fg = colors.cyan, italic = true },
 						["@keyword.import"] = { fg = colors.yellowdark, italic = true },
+						["@keyword.export"] = { fg = colors.yellowdark, italic = true },
+						["@keyword.return"] = { fg = colors.cyandarker, italic = true },
+						["@string"] = { fg = colors.rosewater },
 						-- svelte
-						["@string.svelte"] = { fg = colors.rosewater },
 						["@tag.svelte"] = { fg = colors.maroon },
 						["@component.svelte"] = { fg = colors.svelte, bold = true },
 						["@label.typescript"] = { fg = colors.svelte, bold = true },
@@ -70,11 +73,9 @@ return {
 						["@lsp.typemod.function.local.svelte"] = { fg = colors.blue },
 						["@lsp.typemod.function.readonly.svelte"] = { fg = colors.sapphire },
 						-- JS
-						["@string.javascript"] = { fg = colors.rosewater },
 						["@function.method.call.javascript"] = { bold = true },
 						-- TS
-						["@string.typescript"] = { fg = colors.rosewater },
-						["@keyword.typescript"] = { fg = colors.yellowdark },
+						["@keyword.typescript"] = { fg = colors.tsdarker },
 						["@punctuation.special.typescript"] = { fg = colors.yellow },
 						["@punctuation.delimiter.typescript"] = { fg = colors.surface1 },
 						["@keyword.type.typescript"] = { fg = colors.tsblue },
