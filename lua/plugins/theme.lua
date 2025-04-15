@@ -23,6 +23,7 @@ return {
 						peach = "#f79e54",
 						rosedarker = "#FF3C5E", -- rose/rouge très éclatant
 						red = "#FF4D4D", -- rouge vif
+						cyan = "#00988e",
 						svelte = "#f96743", -- inchangé
 						paleblue = "#A3F7FF", -- bleu ciel très lumineux
 						paledarker = "#5DCAD6", -- turquoise saturé
@@ -52,6 +53,8 @@ return {
 						["@custom.html"] = { fg = colors.base },
 						["@punctuation.bracket"] = { fg = colors.surface2 },
 						["@keyword.exception"] = { fg = colors.red },
+						["@keyword.coroutine"] = { fg = colors.cyan, italic = true },
+						["@keyword.import"] = { fg = colors.yellowdark, italic = true },
 						-- svelte
 						["@string.svelte"] = { fg = colors.rosewater },
 						["@tag.svelte"] = { fg = colors.maroon },
@@ -77,7 +80,6 @@ return {
 						["@keyword.type.typescript"] = { fg = colors.tsblue },
 						["@keyword.conditional.typescript"] = { fg = colors.lavender, italic = true },
 						["@keyword.operator.typescript"] = { fg = colors.tsdarker, italic = true },
-						["@keyword.coroutine.typescript"] = { fg = colors.paledarker, italic = true },
 						["@lsp.type.type.svelte"] = { fg = colors.tsblue, underline = true },
 						["@lsp.type.type.typescript"] = { fg = colors.tsblue, underline = true },
 						["@type.builtin.typescript"] = { fg = colors.tsblue },
