@@ -8,6 +8,7 @@ return {
 			build = "make",
 		},
 		"nvim-tree/nvim-web-devicons", -- requires Nerd font
+		"debugloop/telescope-undo.nvim",
 	},
 
 	config = function()
@@ -31,10 +32,12 @@ return {
 			},
 			extensions = {
 				fzf = {},
+				undo = {},
 			},
 		})
 
 		telescope.load_extension("fzf")
+		telescope.load_extension("undo")
 
 		vim.keymap.set("n", "<leader>sf", builtin.find_files, { desc = "[S]earch [F]iles" })
 		vim.keymap.set("n", "<leader>sg", multigrep.search, { desc = "[S]earch with [G]rep" })
@@ -45,6 +48,7 @@ return {
 		vim.keymap.set("n", "<leader>sr", builtin.oldfiles, { desc = "[S]earch [R]ecent Files" })
 		vim.keymap.set("n", "<leader>sb", builtin.buffers, { desc = "[S]earch existing [B]uffers" })
 		vim.keymap.set("n", "<leader>sw", builtin.grep_string, { desc = "[S]earch current [W]ord" })
+		vim.keymap.set("n", "<leader>su", "<cmd>Telescope undo<cr>", { desc = "[S]earch [U]ndo" })
 		vim.keymap.set("n", "<leader>/", function()
 			builtin.current_buffer_fuzzy_find(themes.get_dropdown({
 				winblend = 0,
