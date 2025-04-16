@@ -41,7 +41,7 @@ return {
 					---@diagnostic disable: undefined-field
 					return {
 						-- NVIM
-						TelescopeBorder = { fg = colors.yellow },
+						TelescopeBorder = { fg = colors.cyan },
 						CursorLineNr = { fg = colors.green, bold = true },
 						CursorLine = { bg = colors.trans },
 						AvanteToBeDelete = { bg = colors.red, fg = colors.cyan },
