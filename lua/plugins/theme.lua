@@ -2,7 +2,7 @@ return {
 	{
 		"catppuccin/nvim",
 		enabled = true,
-		name = "catppuccin",
+		Name = "catppuccin",
 		priority = 1000,
 		config = function()
 			-- theme
@@ -38,17 +38,26 @@ return {
 					},
 				},
 				custom_highlights = function(colors)
+					---@diagnostic disable: undefined-field
 					return {
+						-- NVIM
 						TelescopeBorder = { fg = colors.green },
 						CursorLineNr = { fg = colors.green, bold = true },
 						CursorLine = { bg = colors.trans },
+						AvanteToBeDelete = { bg = colors.red, fg = colors.cyan },
+						TreesitterContext = { fg = colors.crust },
+						TreesitterContextLineNumber = { fg = colors.surface2, underline = false },
+						TreesitterContextBottom = { underline = false, undercurl = false },
+						TreesitterContextLineNumberBottom = { underline = false, undercurl = false },
 						MiniIndentscopeSymbol = { fg = colors.surface2 }, -- ligne d'indentation mini.indentscope
 						LineNr = { fg = colors.surface2 }, -- gutter line numbers
 						IblScope = { fg = colors.surface1 },
 						Operator = { fg = colors.yellow },
 						Comment = { fg = colors.surface2 },
 						AvanteSuggestion = { reverse = true },
-						AvantePopupHint = { bg = colors.green },
+						AvantePopupHint = { fg = colors.green },
+
+						-- General
 						["@property"] = { fg = colors.text },
 						["@tag.delimiter.svelte"] = { fg = colors.surface1 },
 						["@custom.html"] = { fg = colors.base },
@@ -59,7 +68,8 @@ return {
 						["@keyword.export"] = { fg = colors.yellowdark, italic = true },
 						["@keyword.return"] = { fg = colors.cyandarker, italic = true },
 						["@string"] = { fg = colors.rosewater },
-						-- svelte
+
+						-- Svelte
 						["@tag.svelte"] = { fg = colors.maroon },
 						["@component.svelte"] = { fg = colors.svelte, bold = true },
 						["@label.typescript"] = { fg = colors.svelte, bold = true },
@@ -98,7 +108,6 @@ return {
 					}
 				end,
 			})
-
 			vim.cmd.colorscheme("catppuccin")
 		end,
 	},
