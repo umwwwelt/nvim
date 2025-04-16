@@ -47,7 +47,6 @@ return {
 						AvanteToBeDelete = { bg = colors.red, fg = colors.cyan },
 						TreesitterContext = { fg = colors.crust },
 						TreesitterContextLineNumber = { fg = colors.surface2, underline = false },
-						TreesitterContextBottom = { underline = false, undercurl = false },
 						TreesitterContextLineNumberBottom = { underline = false, undercurl = false },
 						MiniIndentscopeSymbol = { fg = colors.surface2 }, -- ligne d'indentation mini.indentscope
 						LineNr = { fg = colors.surface2 }, -- gutter line numbers
