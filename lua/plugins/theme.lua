@@ -25,7 +25,7 @@ return {
 						red = "#FF4D4D", -- rouge vif
 						cyan = "#00988e",
 						cyandarker = "#005c56",
-						svelte = "#f96743", -- inchangé
+						svelte = "#ff3e00", -- inchangé
 						paleblue = "#A3F7FF", -- bleu ciel très lumineux
 						paledarker = "#5DCAD6", -- turquoise saturé
 						blue = "#3EBEFF", -- bleu électrique
