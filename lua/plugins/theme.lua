@@ -19,7 +19,7 @@ return {
 					mocha = {
 						green = "#5FFFB2", -- inchangé
 						lavender = "#E1AFFF", -- violet clair très saturé
-						mauve = "#7c0701", -- violet électrique
+						mauve = "#7c00db", -- violet électrique
 						peach = "#f79e54",
 						rosedarker = "#FF3C5E", -- rose/rouge très éclatant
 						red = "#FF4D4D", -- rouge vif
@@ -53,8 +53,13 @@ return {
 						IblScope = { fg = colors.surface1 },
 						Operator = { fg = colors.yellow },
 						Comment = { fg = colors.surface2 },
-						AvanteSuggestion = { reverse = true },
+						AvanteSuggestion = { bg = colors.surface1 },
 						AvantePopupHint = { fg = colors.green },
+						AvanteToBeDeleted = { bg = colors.red, fg = colors.trans },
+
+						-- StatusLine
+						MiniStatuslineModeNormal = { bg = colors.cyan },
+						MiniStatuslineModeInsert = { bg = colors.yellow },
 
 						-- General
 						["@property"] = { fg = colors.text },
@@ -81,8 +86,10 @@ return {
 						["@lsp.type.function.svelte"] = { fg = colors.svelte },
 						["@lsp.typemod.function.local.svelte"] = { fg = colors.blue },
 						["@lsp.typemod.function.readonly.svelte"] = { fg = colors.sapphire },
+
 						-- JS
 						["@function.method.call.javascript"] = { bold = true },
+
 						-- TS
 						["@keyword.typescript"] = { fg = colors.tsdarker },
 						["@punctuation.special.typescript"] = { fg = colors.yellow },
@@ -95,11 +102,13 @@ return {
 						["@type.builtin.typescript"] = { fg = colors.tsblue },
 						["@lsp.type.interface"] = { fg = colors.tsblue, underline = true },
 						["@lsp.typemod.interface.declaration.svelte"] = { fg = colors.tsblue },
+
 						-- CSS
 						["@property.class.scss"] = { fg = colors.blue },
 						["@keyword.directive.scss"] = { fg = colors.rosedarker },
 						["@variable.scss"] = { fg = colors.lavender },
 						["@character.special.scss"] = { fg = colors.yellow },
+
 						-- Diag
 						DiagnosticWarn = { fg = colors.yellowdark },
 						DiagnosticVirtualTextWarn = { fg = colors.yellowdark },

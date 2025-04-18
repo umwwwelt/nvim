@@ -13,10 +13,4 @@
  (tag_name) @component
  (#match? @component "^[A-Z]"))
 
-((raw_text) @runes (#any-of? @runes "$derived" "$effect" "$props"))
-
-
-
-
-
-
+; ((raw_text) @runes (#any-of? @runes "$derived" "$effect" "$props"))

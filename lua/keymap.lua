@@ -12,6 +12,11 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 -- delete entire word
 vim.keymap.set("i", "<M-BS>", "<C-w>", { noremap = true })
 
+-- Do not lose previously yanked content
+vim.keymap.set("x", "<leader>p", '"_dP')
+vim.keymap.set("n", "<leader>d", '"_d')
+vim.keymap.set("v", "<leader>d", '"_d')
+
 -- cmd+s to save file
 vim.keymap.set({ "n", "i", "v" }, "M-s>", "<cmd>w<CR>", { desc = "Save file" })
 
