@@ -22,18 +22,18 @@ vim.keymap.set({ "n", "i", "v" }, "M-s>", "<cmd>w<CR>", { desc = "Save file" })
 
 -- move in autocompletion suggestionkeykey
 ---[[ Setup keymaps so we can accept completion using Enter and choose items using arrow keys or Tab.
-local pumMaps = {
-	["<Tab>"] = "<C-n>",
-	["<S-Tab>"] = "<C-p>",
-	["<Down>"] = "<C-n>",
-	["<Up>"] = "<C-p>",
-	["<CR>"] = "<C-y>",
-}
-for insertKmap, pumKmap in pairs(pumMaps) do
-	vim.keymap.set("i", insertKmap, function()
-		return vim.fn.pumvisible() == 1 and pumKmap or insertKmap
-	end, { expr = true })
-end
+-- local pumMaps = {
+-- 	["<Tab>"] = "<C-n>",
+-- 	["<S-Tab>"] = "<C-p>",
+-- 	["<Down>"] = "<C-n>",
+-- 	["<Up>"] = "<C-p>",
+-- 	["<CR>"] = "<C-y>",
+-- }
+-- for insertKmap, pumKmap in pairs(pumMaps) do
+-- 	vim.keymap.set("i", insertKmap, function()
+-- 		return vim.fn.pumvisible() == 1 and pumKmap or insertKmap
+-- 	end, { expr = true })
+-- end
 ---]]
 
 -- reload files

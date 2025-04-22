@@ -19,7 +19,7 @@ return {
 					mocha = {
 						green = "#5FFFB2", -- inchangé
 						lavender = "#E1AFFF", -- violet clair très saturé
-						mauve = "#7c00db", -- violet électrique
+						mauve = "#886bc2", -- violet électrique
 						peach = "#f79e54",
 						rosedarker = "#FF3C5E", -- rose/rouge très éclatant
 						red = "#FF4D4D", -- rouge vif
@@ -56,6 +56,8 @@ return {
 						AvanteSuggestion = { bg = colors.surface1 },
 						AvantePopupHint = { fg = colors.green },
 						AvanteToBeDeleted = { bg = colors.red, fg = colors.trans },
+						AvanteSidebarWinSeparator = { fg = colors.cyan },
+						AvanteTitle = { bg = colors.cyan },
 
 						-- StatusLine
 						MiniStatuslineModeNormal = { bg = colors.cyan },
@@ -89,6 +91,7 @@ return {
 
 						-- JS
 						["@function.method.call.javascript"] = { bold = true },
+						["@fetch.typescript"] = { fg = colors.cyan },
 
 						-- TS
 						["@keyword.typescript"] = { fg = colors.tsdarker },
