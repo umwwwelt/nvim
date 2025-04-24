@@ -65,3 +65,10 @@ vim.opt.undofile = true
 
 -- blink avante
 vim.api.nvim_set_hl(0, "BlinkCmpKindAvante", { default = false, fg = "#89b4fa" })
+
+vim.api.nvim_create_user_command("WrapConsoleTime", function()
+	local line_num = vim.fn.line(".")
+	local var = vim.fn.expand("<cword>") or "myTimer"
+	vim.fn.append(line_num - 1, 'console.time("' .. var .. '");')
+	vim.fn.append(line_num + 1, 'console.timeEnd("' .. var .. '");')
+end, {})

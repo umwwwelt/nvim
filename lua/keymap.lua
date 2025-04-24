@@ -1,6 +1,5 @@
 -- mapping
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>ui", vim.cmd.NvimTreeToggle)
 
 -- visual move
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -40,6 +39,9 @@ vim.keymap.set({ "n", "i", "v" }, "M-s>", "<cmd>w<CR>", { desc = "Save file" })
 -- Execute current file, line, selection
 vim.keymap.set("n", "<leader><leader>x", "<cmd>source %<CR>")
 
+-- collapse nvim tree
+vim.keymap.set("n", "<leader>tt", vim.cmd.NvimTreeToggle, { desc = "Nvim[T]ree [T]oggle" })
+vim.keymap.set("n", "<leader>tc", vim.cmd.NvimTreeCollapse, { desc = "Nvim[T]ree [C]ollapse" })
 -- inspect definitions
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic [E]rror messages" })
 

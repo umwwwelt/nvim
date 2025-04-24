@@ -116,6 +116,9 @@ return {
 						DiagnosticWarn = { fg = colors.yellowdark },
 						DiagnosticVirtualTextWarn = { fg = colors.yellowdark },
 						DiagnosticUnderlineWarn = { sp = colors.yellowdark, undercurl = true },
+
+						-- MD
+						rainbow2 = { fg = colors.none, bg = colors.cyan },
 					}
 				end,
 			})
