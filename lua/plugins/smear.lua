@@ -1,6 +1,7 @@
 return {
-  "sphamba/smear-cursor.nvim",
-  opts = {
-     -- cursor_color = "#93dbbd",
-  },
+	"sphamba/smear-cursor.nvim",
+	enabled = false,
+	opts = {
+		-- cursor_color = "#93dbbd",
+	},
 }

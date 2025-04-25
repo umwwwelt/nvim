@@ -30,6 +30,9 @@ return {
 					},
 				},
 			},
+			defaults = {
+				winblend = 10,
+			},
 			extensions = {
 				fzf = {},
 				undo = {},
@@ -51,7 +54,7 @@ return {
 		vim.keymap.set("n", "<leader>su", "<cmd>Telescope undo<cr>", { desc = "[S]earch [U]ndo" })
 		vim.keymap.set("n", "<leader>/", function()
 			builtin.current_buffer_fuzzy_find(themes.get_dropdown({
-				winblend = 0,
+				winblend = 10,
 				previewer = false,
 			}))
 		end, { desc = "[/] Fuzzily search in current buffer" })

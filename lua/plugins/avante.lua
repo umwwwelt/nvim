@@ -1,14 +1,14 @@
 return {
 	{
 		"yetone/avante.nvim",
-		enabled = false,
+		enabled = true,
 		event = "VeryLazy",
 		version = false, -- Never set this value to "*"! Never!
 		opts = {
 			-- add any opts here
 			-- for example avante
 			provider = "openai",
-			auto_suggestions_provider = "gemini",
+			auto_suggestions_provider = "openai",
 			memory_summary_provider = "gemini",
 			cursor_applying_provider = "gemini",
 			openai = {
@@ -23,7 +23,7 @@ return {
 				max_tokens = 8192,
 			},
 			gemini = {
-				model = "gemini-2.0-flash-lite",
+				model = "gemini-2.5-flash-preview-04-17",
 			},
 			vendors = {
 				mistral = {

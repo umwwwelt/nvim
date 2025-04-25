@@ -72,3 +72,26 @@ vim.api.nvim_create_user_command("WrapConsoleTime", function()
 	vim.fn.append(line_num - 1, 'console.time("' .. var .. '");')
 	vim.fn.append(line_num + 1, 'console.timeEnd("' .. var .. '");')
 end, {})
+
+-- NeoVide config only
+if vim.g.neovide then
+	-- Put anything you want to happen only in Neovide here
+	local alpha = function()
+		return string.format("%x", math.floor(255 * vim.g.neovide_opacity_point or 0.8))
+	end
+	-- Set transparency and background color (title bar color)
+	vim.g.neovide_opacity = 0.0
+	vim.g.neovide_opacity_point = 0.9
+	vim.g.neovide_background_color = "#0f1117" .. alpha()
+	vim.g.neovide_blur_amount_x = 10
+	vim.g.neovide_blur_amount_y = 10
+	vim.g.neovide_winblend = 10
+	vim.g.neovide_pumblend = 10
+
+	vim.keymap.set("n", "<D-s>", ":w<CR>") -- Save
+	vim.keymap.set("v", "<D-c>", '"+y') -- Copy
+	vim.keymap.set("n", "<D-v>", '"+P') -- Paste normal mode
+	vim.keymap.set("v", "<D-v>", '"+P') -- Paste visual mode
+	vim.keymap.set("c", "<D-v>", "<C-R>+") -- Paste command mode
+	vim.keymap.set("i", "<D-v>", '<ESC>l"+Pli') -- Paste insert mode
+end
