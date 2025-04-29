@@ -9,6 +9,11 @@ return {
 		{ "stevearc/dressing.nvim", opts = {} }, -- Optional: Improves `vim.ui.select`
 		"Davidyz/VectorCode",
 	},
+	opts = {
+		chat = {
+			auto_scroll = false,
+		},
+	},
 	config = function()
 		-- Create a variable to track the current provider
 		local current_provider = "openai" -- Default provider
