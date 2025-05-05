@@ -48,7 +48,7 @@ return {
 				provider = "brave",
 			},
 			behaviour = {
-				auto_suggestions = true,
+				auto_suggestions = false,
 				enable_cursor_planning_mode = true,
 				auto_suggestions_respect_ignore = true,
 				enable_claude_text_editor_tool_mode = false,
@@ -67,6 +67,7 @@ return {
 				sidebar_header = {
 					rounded = false,
 					align = "left",
+					auto_scroll = false,
 				},
 				edit = {
 					border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },

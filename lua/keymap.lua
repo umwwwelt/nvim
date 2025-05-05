@@ -46,4 +46,4 @@ vim.keymap.set("n", "<leader>tc", vim.cmd.NvimTreeCollapse, { desc = "Nvim[T]ree
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic [E]rror messages" })
 
 -- Avante
-vim.keymap.set("n", "<leader>ac", "<cmd>AvanteClear<Return>", { desc = "[C]lear [A]vante" })
+vim.keymap.set("n", "<leader>ac", "<cmd>AvanteChatNew<Return>", { desc = "[C]lear [A]vante" })
