@@ -38,7 +38,7 @@ return {
 				throttle = 1000,
 			},
 			rag_service = {
-				enabled = false, -- Enables the RAG service
+				enabled = true, -- Enables the RAG service
 				host_mount = os.getenv("HOME"), -- Host mount path for the rag service
 				provider = "openai", -- The provider to use for RAG service (e.g. openai or ollama)
 				llm_model = "4o-mini", -- The LLM model to use for RAG service

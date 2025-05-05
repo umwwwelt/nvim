@@ -42,6 +42,9 @@ return {
 					return {
 						-- NVIM
 						TelescopeBorder = { fg = colors.cyan },
+						NoiceCmdlinePopupBorder = { fg = colors.peach },
+						AlphaHeader = { bg = colors.cyan },
+
 						CursorLineNr = { fg = colors.green, bold = true },
 						CursorLine = { bg = colors.trans },
 						AvanteToBeDelete = { bg = colors.red, fg = colors.cyan },
@@ -116,9 +119,6 @@ return {
 						DiagnosticWarn = { fg = colors.yellowdark },
 						DiagnosticVirtualTextWarn = { fg = colors.yellowdark },
 						DiagnosticUnderlineWarn = { sp = colors.yellowdark, undercurl = true },
-
-						-- MD
-						rainbow2 = { fg = colors.none, bg = colors.cyan },
 					}
 				end,
 			})
