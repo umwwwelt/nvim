@@ -34,6 +34,7 @@ return {
 				-- tsserver = {}, -- do not use tsserver, as typescript-tools is much faster
 				svelte = {},
 				cssls = {},
+				tailwindcss = {},
 				graphql = {},
 				html = { filetypes = { "html" } },
 				lua_ls = {

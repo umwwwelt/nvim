@@ -1,3 +1,4 @@
+-- Statusline config start
 local function override_hl()
 	local filename_hl = { bg = "#181825", fg = "#CDD6F5" }
 	local inactive_hl = { bg = "#181825", fg = "#89B4FB" }
