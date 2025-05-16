@@ -47,7 +47,7 @@ vim.opt.inccommand = "split"
 vim.opt.signcolumn = "yes"
 vim.diagnostic.config({
 	virtual_text = false,
-	virtual_lines = { only_current_line = true },
+	virtual_lines = { current_line = true },
 	underline = false,
 	italic = false,
 	signs = {
