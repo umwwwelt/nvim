@@ -23,6 +23,7 @@ return {
 						peach = "#f79e54",
 						rosedarker = "#FF3C5E", -- rose/rouge très éclatant
 						red = "#FF4D4D", -- rouge vif
+						reddarker = "#852626",
 						cyan = "#00988e",
 						cyandarker = "#005c56",
 						svelte = "#ff3e00", -- inchangé
@@ -119,6 +120,8 @@ return {
 						DiagnosticWarn = { fg = colors.yellowdark },
 						DiagnosticVirtualTextWarn = { fg = colors.yellowdark },
 						DiagnosticUnderlineWarn = { sp = colors.yellowdark, undercurl = true },
+						DiagnosticError = { fg = colors.reddarker },
+						DiagnosticSignError = { fg = colors.reddarker },
 					}
 				end,
 			})
