@@ -45,7 +45,7 @@ return {
 						TelescopeBorder = { fg = colors.cyan },
 						NoiceCmdlinePopupBorder = { fg = colors.peach },
 						AlphaHeader = { bg = colors.cyan },
-
+						NotifyBackground = { bg = colors.base },
 						CursorLineNr = { fg = colors.green, bold = true },
 						CursorLine = { bg = colors.trans },
 						AvanteToBeDelete = { bg = colors.red, fg = colors.cyan },

@@ -50,6 +50,12 @@ return {
 		vim.keymap.set("n", "<leader>s.", builtin.resume, { desc = "[S]earch resume ('.' for repeat)" })
 		vim.keymap.set("n", "<leader>sr", builtin.oldfiles, { desc = "[S]earch [R]ecent Files" })
 		vim.keymap.set("n", "<leader>sb", builtin.buffers, { desc = "[S]earch existing [B]uffers" })
+		vim.keymap.set(
+			"n",
+			"<leader>sm",
+			"<cmd>Telescope marks mark_type=global<cr>",
+			{ desc = "[S]earch existing [M]arks" }
+		)
 		vim.keymap.set("n", "<leader>sw", builtin.grep_string, { desc = "[S]earch current [W]ord" })
 		vim.keymap.set("n", "<leader>su", "<cmd>Telescope undo<cr>", { desc = "[S]earch [U]ndo" })
 		vim.keymap.set("n", "<leader>/", function()

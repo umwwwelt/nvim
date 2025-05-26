@@ -8,12 +8,15 @@ return {
 		messages = {
 			view = "mini", -- default view for messages
 			view_error = "mini", -- view for errors
-			view_warn = "mini", -- view for warnings
+			-- view_warn = "mini", -- view for warnings
 			view_history = "mini", -- view for :messages
 			view_search = "mini", -- view for search count messages. Set to `false` to disable
 		},
 		notify = {
+			timeout = 6500,
+			stages = "static",
 			view = "mini",
+			background_colour = "#1a1b26",
 		},
 		lsp = {
 			view = "mini",
