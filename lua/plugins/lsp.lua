@@ -14,6 +14,7 @@ return {
 				-- `lazydev` configures Lua LSP for your Neovim config, runtime and plugins
 				-- used for completion, annotations and signatures of Neovim apis
 				"folke/lazydev.nvim",
+				name = "lazydev",
 				ft = "lua",
 				opts = {
 					library = {
@@ -32,7 +33,11 @@ return {
 		config = function()
 			local servers = {
 				-- tsserver = {}, -- do not use tsserver, as typescript-tools is much faster
-				svelte = {},
+				svelte = {
+					settings = {
+						enable_ts_plugin = true,
+					},
+				},
 				cssls = {},
 				tailwindcss = {},
 				graphql = {},
@@ -128,20 +133,6 @@ return {
 		-- Better Typescript LSP
 		"pmizio/typescript-tools.nvim",
 		dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-		config = function()
-			require("typescript-tools").setup({
-				on_attach = function(client)
-					client.server_capabilities.documentFormattingProvider = false
-					client.server_capabilities.documentRangeFormattingProvider = false
-				end,
-				settings = {
-					jsx_close_tag = {
-						enable = true,
-						filetypes = { "javascriptreact", "typescriptreact" },
-					},
-				},
-			})
-		end,
 		opts = {},
 	},
 }

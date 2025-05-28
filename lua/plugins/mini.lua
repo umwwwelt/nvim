@@ -82,8 +82,6 @@ return {
 			-- - sr)'  - [S]urround [R]eplace [)] [']
 			require("mini.surround").setup()
 
-			require("mini.pairs").setup()
-
 			if vim.g.colors_name == "catppuccin-mocha" then
 				override_hl()
 			end
