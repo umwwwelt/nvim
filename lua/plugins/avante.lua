@@ -7,32 +7,30 @@ return {
 		opts = {
 			-- add any opts here
 			-- for example avante
-			provider = "openai",
+			provider = "claude",
+			providers = {
+				openai = {
+					endpoint = "https://api.openai.com/v1",
+					model = "gpt-4.1-2025-04-14",
+					api_key_name = "OPENAI_API_KEY",
+					__inherited_from = "openai",
+				},
+				claude = {
+					model = "claude-3-7-sonnet-latest",
+				},
+				gemini = {
+					model = "gemini-2.5-flash-preview-04-17",
+				},
+				mistral = {
+					__inherited_from = "openai",
+					api_key_name = "MISTRAL_API_KEY",
+					endpoint = "https://api.mistral.ai/v1/",
+					model = "codestral-latest",
+				},
+			},
 			auto_suggestions_provider = "openai",
 			memory_summary_provider = "gemini",
 			cursor_applying_provider = "gemini",
-			openai = {
-				endpoint = "https://api.openai.com/v1",
-				model = "gpt-4.1-2025-04-14", -- your desired model (or use gpt-4o, etc.)
-				timeout = 30000, -- Timeout in milliseconds, increase this for reasoning models
-				temperature = 0,
-				--reasoning_effort = "medium", -- low|medium|high, only used for reasoning models
-			},
-			claude = {
-				model = "claude-3-7-sonnet-latest",
-				max_tokens = 8192,
-			},
-			gemini = {
-				model = "gemini-2.5-flash-preview-04-17",
-			},
-			vendors = {
-				mistral = {
-					api_key_name = "MISTRAL_API_KEY",
-					endpoint = "https://api.mistral.ai/v1",
-					model = "codestral-latest",
-					__inherited_from = "openai",
-				},
-			},
 			suggestion = {
 				debounce = 300,
 				throttle = 1000,

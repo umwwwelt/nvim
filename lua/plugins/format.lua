@@ -5,14 +5,15 @@ return {
 		opts = {
 			format_on_save = {
 				-- These options will be passed to conform.format()
-				timeout_ms = 500,
-				lsp_format = "fallback",
+				timeout_ms = 1000,
+				async = false,
+				lsp_format = "first",
 			},
 			formatters_by_ft = {
 				lua = { "stylua" },
-				javascript = { "prettierd" },
-				typescript = { "prettierd" },
-				svelte = { "prettierd" },
+				javascript = { "eslint_d", "prettierd" },
+				typescript = { "eslint_d", "prettierd" },
+				svelte = { "eslint_d", "prettierd" },
 				css = { "prettierd" },
 				html = { "prettierd" },
 				json = { "prettierd" },

@@ -13,7 +13,7 @@ return {
 			view_search = "mini", -- view for search count messages. Set to `false` to disable
 		},
 		notify = {
-			timeout = 6500,
+			timeout = 3500,
 			stages = "static",
 			view = "mini",
 			background_colour = "#1a1b26",
@@ -27,14 +27,16 @@ return {
 				},
 			},
 		},
+		-- cmdline = {
+		-- 	view = "cmdline",
+		-- },
+		popupmenu = {
+			enabled = true,
+		},
 	},
 	dependencies = {
 		-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
 		"MunifTanjim/nui.nvim",
-		-- OPTIONAL:
-		--   `nvim-notify` is only needed, if you want to use the notification view.
-		--   If not available, we use `mini` as the fallback
-		"rcarriga/nvim-notify",
 	},
 	config = function(_, opts)
 		require("noice").setup(opts)
