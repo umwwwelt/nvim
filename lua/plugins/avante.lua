@@ -1,13 +1,13 @@
 return {
 	{
 		"yetone/avante.nvim",
-		enabled = false,
+		enabled = true,
 		event = "VeryLazy",
 		version = false, -- Never set this value to "*"! Never!
 		opts = {
 			-- add any opts here
 			-- for example avante
-			provider = "claude",
+			provider = "openai",
 			providers = {
 				openai = {
 					endpoint = "https://api.openai.com/v1",
@@ -36,8 +36,8 @@ return {
 				throttle = 1000,
 			},
 			rag_service = {
-				enabled = true, -- Enables the RAG service
-				host_mount = os.getenv("HOME"), -- Host mount path for the rag service
+				enabled = false, -- Enables the RAG service
+				host_mount = os.getenv("HOME/Users/tantra/Code/"), -- Host mount path for the rag service
 				provider = "openai", -- The provider to use for RAG service (e.g. openai or ollama)
 				llm_model = "4o-mini", -- The LLM model to use for RAG service
 				embed_model = "text-embedding-ada-002", -- The embedding model to use for RAG service
@@ -47,10 +47,10 @@ return {
 			},
 			behaviour = {
 				auto_suggestions = false,
-				enable_cursor_planning_mode = true,
+				enable_cursor_planning_mode = false,
 				auto_suggestions_respect_ignore = true,
 				enable_claude_text_editor_tool_mode = false,
-				use_cwd_as_project_root = true,
+				use_cwd_as_project_root = false,
 			},
 			mappings = {
 				suggestion = {
@@ -69,7 +69,7 @@ return {
 				},
 				edit = {
 					border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-					start_insert = false,
+					start_insert = true,
 				},
 			},
 		},

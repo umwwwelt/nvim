@@ -12,6 +12,9 @@ vim.opt.relativenumber = true
 -- ligatures
 vim.opt.termguicolors = true
 
+-- no ~ for end lines
+vim.opt.fillchars:append({ eob = " " }) -- eob = end-of-buffer
+
 -- encoding / icons
 --vim.opt.ambiwidth = "double"
 vim.opt.encoding = "utf-8"

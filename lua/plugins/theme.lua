@@ -23,7 +23,7 @@ return {
 						peach = "#f79e54",
 						rosedarker = "#FF3C5E", -- rose/rouge très éclatant
 						red = "#FF4D4D", -- rouge vif
-						reddarker = "#852626",
+						reddarker = "#b23535",
 						cyan = "#00988e",
 						cyandarker = "#005c56",
 						svelte = "#ff3e00", -- inchangé
