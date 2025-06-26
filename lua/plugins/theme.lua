@@ -32,7 +32,8 @@ return {
 						blue = "#3EBEFF", -- bleu électrique
 						tsblue = "#007ACC", -- inchangé
 						tsdarker = "#0063A6", -- bleu foncé mais plus saturé
-						surface1 = "#46424E", -- gris profond, un peu bleuté
+						surface1 = "#474352", -- gris très clair
+						surface2 = "#625c70", -- gris profond, un peu bleuté
 						yellow = "#f7d302",
 						yellowdark = "#5c4e01",
 						trans = "#0F1413", -- noir doux avec un peu plus de lumière
@@ -54,10 +55,10 @@ return {
 						TreesitterContextLineNumberBottom = { underline = false, undercurl = false },
 						MiniIndentscopeSymbol = { fg = colors.surface2 }, -- ligne d'indentation mini.indentscope
 						LineNr = { fg = colors.surface2 }, -- gutter line numbers
-						IblScope = { fg = colors.surface1 },
+						IblScope = { fg = colors.surface2 },
 						Operator = { fg = colors.yellow },
-						Comment = { fg = colors.surface2 },
-						AvanteSuggestion = { bg = colors.surface1 },
+						Comment = { fg = colors.surface1 },
+						AvanteSuggestion = { bg = colors.surface2 },
 						AvantePopupHint = { fg = colors.green },
 						AvanteToBeDeleted = { bg = colors.red, fg = colors.trans },
 						AvanteSidebarWinSeparator = { fg = colors.cyan },
@@ -69,7 +70,7 @@ return {
 
 						-- General
 						["@property"] = { fg = colors.text },
-						["@tag.delimiter.svelte"] = { fg = colors.surface1 },
+						["@tag.delimiter.svelte"] = { fg = colors.surface2 },
 						["@custom.html"] = { fg = colors.base },
 						["@punctuation.bracket"] = { fg = colors.surface2 },
 						["@keyword.exception"] = { fg = colors.red },
@@ -100,7 +101,7 @@ return {
 						-- TS
 						["@keyword.typescript"] = { fg = colors.tsdarker },
 						["@punctuation.special.typescript"] = { fg = colors.yellow },
-						["@punctuation.delimiter.typescript"] = { fg = colors.surface1 },
+						["@punctuation.delimiter.typescript"] = { fg = colors.surface2 },
 						["@keyword.type.typescript"] = { fg = colors.tsblue },
 						["@keyword.conditional.typescript"] = { fg = colors.lavender, italic = true },
 						["@keyword.operator.typescript"] = { fg = colors.tsdarker, italic = true },

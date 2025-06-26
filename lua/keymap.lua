@@ -11,13 +11,17 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 -- delete entire word
 vim.keymap.set("i", "<M-BS>", "<C-w>", { noremap = true })
 
--- Do not lose previously yanked content
-vim.keymap.set("x", "<leader>p", '"_dP')
-vim.keymap.set("n", "<leader>d", '"_d')
-vim.keymap.set("v", "<leader>d", '"_d')
-
 -- cmd+s to save file
 vim.keymap.set({ "n", "i", "v" }, "M-s>", "<cmd>w<CR>", { desc = "Save file" })
+
+-- register d when deleting
+vim.keymap.set({ "n", "v" }, "d", '"dd', { noremap = true })
+vim.keymap.set({ "n", "v" }, "x", '"dd', { noremap = true })
+vim.keymap.set({ "n", "v" }, "c", '"dd', { noremap = true })
+
+-- rewrite goto like Helix
+vim.keymap.set("n", "gh", "^", { desc = "Go the begining of the line" })
+vim.keymap.set("n", "gl", "$", { desc = "Go the end of the line" })
 
 -- move in autocompletion suggestionkeykey
 ---[[ Setup keymaps so we can accept completion using Enter and choose items using arrow keys or Tab.
