@@ -30,14 +30,11 @@ return {
 			},
 			"saghen/blink.cmp",
 		},
+
 		config = function()
 			local servers = {
 				-- tsserver = {}, -- do not use tsserver, as typescript-tools is much faster
-				svelte = {
-					settings = {
-						enable_ts_plugin = true,
-					},
-				},
+				svelte = {},
 				cssls = {},
 				tailwindcss = {},
 				graphql = {},
@@ -133,13 +130,6 @@ return {
 		-- Better Typescript LSP
 		"pmizio/typescript-tools.nvim",
 		dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-		opts = {
-			settings = {
-				root_dir = vim.fs.dirname(
-					vim.fs.find(".git", { path = vim.api.nvim_buf_get_name(0), upward = true })[1]
-				),
-				-- tsserver_path = "/Users/tantra/Library/pnpm/tsserver",
-			},
-		},
+		opts = {},
 	},
 }

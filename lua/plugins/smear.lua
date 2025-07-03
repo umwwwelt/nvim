@@ -1,6 +1,6 @@
 return {
 	"sphamba/smear-cursor.nvim",
-	enabled = true,
+	enabled = false,
 	opts = {
 		cursor_color = "#00998e",
 	},

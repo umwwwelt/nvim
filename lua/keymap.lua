@@ -16,8 +16,11 @@ vim.keymap.set({ "n", "i", "v" }, "M-s>", "<cmd>w<CR>", { desc = "Save file" })
 
 -- register d when deleting
 vim.keymap.set({ "n", "v" }, "d", '"dd', { noremap = true })
-vim.keymap.set({ "n", "v" }, "x", '"dd', { noremap = true })
 vim.keymap.set({ "n", "v" }, "c", '"dd', { noremap = true })
+vim.keymap.set("n", "diw", [["_diw]], { noremap = true })
+vim.keymap.set("n", "diq", [["_diq]], { noremap = true })
+vim.keymap.set("n", "ciw", [["_ciw]], { noremap = true })
+vim.keymap.set("n", "ciq", [["_ciq]], { noremap = true })
 
 -- rewrite goto like Helix
 vim.keymap.set("n", "gh", "^", { desc = "Go the begining of the line" })
