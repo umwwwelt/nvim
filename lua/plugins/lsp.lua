@@ -50,6 +50,7 @@ return {
 						},
 					},
 				},
+				zls = {},
 			}
 			local formatters = {
 				"stylua",
