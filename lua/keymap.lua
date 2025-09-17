@@ -12,7 +12,7 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.keymap.set("i", "<M-BS>", "<C-w>", { noremap = true })
 
 -- cmd+s to save file
-vim.keymap.set({ "n", "i", "v" }, "M-s>", "<cmd>w<CR>", { desc = "Save file" })
+vim.keymap.set({ "n", "v" }, "<leader>w", ":write<CR>", { desc = "Save file" })
 
 -- register d when deleting
 vim.keymap.set({ "n", "v" }, "d", '"dd', { noremap = true })
@@ -44,6 +44,7 @@ vim.keymap.set("n", "<leader><leader>x", "<cmd>source %<CR>")
 -- collapse nvim tree
 vim.keymap.set("n", "<leader>tt", vim.cmd.NvimTreeToggle, { desc = "Nvim[T]ree [T]oggle" })
 vim.keymap.set("n", "<leader>tc", vim.cmd.NvimTreeCollapse, { desc = "Nvim[T]ree [C]ollapse" })
+
 -- inspect definitions
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic [E]rror messages" })
 

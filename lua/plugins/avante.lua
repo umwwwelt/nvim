@@ -56,7 +56,7 @@ return {
 				suggestion = {
 					accept = "<Tab>",
 				},
-				ask = "<leader>à",
+				ask = "<leader>aa",
 				files = {
 					add_current = "<leader>aw",
 				},
